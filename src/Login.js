@@ -27,7 +27,7 @@ function Login() {
     e.preventDefault();    
     setErrors(Validate(loginData));
     if(errors.email === "" && errors.password === "") {
-      axios.post('http://localhost:8081/login', loginData)
+      axios.post('http://localhost:8081/', loginData)
       .then(res => {
         navigate('/home');
       })
